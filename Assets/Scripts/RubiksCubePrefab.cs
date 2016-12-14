@@ -63,7 +63,6 @@ public class RubiksCubePrefab : MonoBehaviour {
     
     public IEnumerator animateCustomSequence(string seq)
     {
-        Debug.Log("animate ok");
         int step = 0;
 
 
@@ -95,7 +94,6 @@ public class RubiksCubePrefab : MonoBehaviour {
                     yield return null;
                 }
                 RC.rotateRightFace(clockwise);
-                Debug.Log("Right face turned");
             }
             else if (c == 'L')
             {
@@ -191,9 +189,7 @@ public class RubiksCubePrefab : MonoBehaviour {
             transform.rotation = Quaternion.identity;
             transform.position = Vector3.zero;
             resetCubePrefabPositions();
-            Debug.Log("Refresh panels.");
             RefreshPanels();
-            Debug.Log("Panels refreshed.");
         }
 
         yield return null;

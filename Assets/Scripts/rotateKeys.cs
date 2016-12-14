@@ -6,6 +6,8 @@ public class rotateKeys : MonoBehaviour {
     
     public RubiksCubePrefab rubikscube;
 
+    public leapHands leapHands;
+
     List<List<List<GameObject>>> cubePrefabMatrix;
     public float spacing = 1.05f;
     public float rotationSpeed = 40;
@@ -14,6 +16,7 @@ public class rotateKeys : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rubikscube = FindObjectOfType(typeof(RubiksCubePrefab)) as RubiksCubePrefab;
+        leapHands = FindObjectOfType(typeof(leapHands)) as leapHands;
     }
 	
 	// Update is called once per frame
